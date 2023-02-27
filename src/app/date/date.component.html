@@ -1,5 +1,7 @@
-<p>
-    Hello {{message1}}!
-</p>
-<h3>Time:</h3>
-<p>{{message2}}</p>
+<div>
+    <h3>
+        Frameworks for Node.js:
+    </h3>
+    <h6>{{items}}</h6>
+    <p *ngFor="let item of items; let i = index;">{{i+1}}) {{item}}</p>
+</div>
