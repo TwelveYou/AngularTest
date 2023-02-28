@@ -1,22 +1,11 @@
 <div>
-    <h3>
-        ngIF:
-    </h3>
-    <div *ngIf="loggedIn; else loggedOut">
-        Logged in.
+    <button (click)="myEvent($event)">Event в консоль</button>
+    <h3> Более реальный пример </h3>
+    <div>
+        <button *ngIf="isCollapsed" (click)="toggleCollapse()">Отобразить</button>
+        <button *ngIf="!isCollapsed" (click)="toggleCollapse()">Спрятать</button>
+        <div *ngIf="!isCollapsed">
+            <p *ngFor="let item of ['тест1','тест2','тест3']">{{item}}</p>
+        </div>
     </div>
-    <ng-template #loggedOut>
-        Login, please.
-    </ng-template>
-
-    <h3>
-        ngIF + then else:
-    </h3>   
-    <ng-template *ngIf="loggedIn; then loggedIn; else loggedOut"> </ng-template>
-        <ng-template #loggedIn>
-            Logged in.
-        </ng-template>
-        <ng-template #loggedOut>
-            Login, please.
-        </ng-template>
 </div>

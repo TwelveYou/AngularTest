@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DateComponent{
-  items : string[] = ["Angular", "React", "Vue", "Nest.JS"];
-  loggedIn : boolean = true;
+  myEvent(event : any){
+    console.log(event);
+    console.log('Привет');
+  }
+
+  isCollapsed : boolean = true;
+  toggleCollapse(){
+    this.isCollapsed = !this.isCollapsed;
+  }
 }
