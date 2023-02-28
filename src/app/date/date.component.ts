@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DateComponent{
-  text:string = 'Hello World';
-  
-  text2:string = 'Hi World';
 
-  showTexts(){
-    console.log('text1 = ' + this.text);
-    console.log('text2 = ' + this.text2);
+  visibility: boolean = false;
+  colorRed: boolean = true;
+
+  toggleVisible(){
+    this.visibility = !this.visibility;
+  }
+
+  toggleColor(){
+    this.colorRed = !this.colorRed;
   }
 }

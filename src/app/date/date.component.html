@@ -1,14 +1,9 @@
-<div>
-    <!-- <input type="text" [value]="text"> -->
-
-    <!-- Однонаправленная привязка -->
-    <input type="text" [ngModel]="text">
-    <p>{{text}}</p>
-
-    <!-- Двусторонняя привязка -->
-    <input type="text" [(ngModel)]="text2">
-    <p>{{text2}}</p> 
+<button (click)="toggleVisible()">Toggle Visible</button>
+<div [ngClass]="{invisible: visibility}">
     
-    <input type="button" value="вывод" (click)="showTexts()">
-
+    <h1>ngClass, ngStyle</h1>
+    <p [ngClass]="{class : true}">Test ngClass</p>
+    <p [ngStyle]="{'color':'black'}">Test ngStyle</p>
+    <p [ngClass]="{colorRed: colorRed, colorGreen: !colorRed}">Test Dynamic Style color</p>
+    <button (click)="toggleColor()">Toggle Color</button>
 </div>
