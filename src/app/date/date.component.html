@@ -1,7 +1,22 @@
 <div>
     <h3>
-        Frameworks for Node.js:
+        ngIF:
     </h3>
-    <h6>{{items}}</h6>
-    <p *ngFor="let item of items; let i = index;">{{i+1}}) {{item}}</p>
+    <div *ngIf="loggedIn; else loggedOut">
+        Logged in.
+    </div>
+    <ng-template #loggedOut>
+        Login, please.
+    </ng-template>
+
+    <h3>
+        ngIF + then else:
+    </h3>   
+    <ng-template *ngIf="loggedIn; then loggedIn; else loggedOut"> </ng-template>
+        <ng-template #loggedIn>
+            Logged in.
+        </ng-template>
+        <ng-template #loggedOut>
+            Login, please.
+        </ng-template>
 </div>

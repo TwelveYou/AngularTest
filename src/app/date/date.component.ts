@@ -7,5 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DateComponent{
-  items = ["Angular", "React", "Vue", "Nest.JS"];
+  items : string[] = ["Angular", "React", "Vue", "Nest.JS"];
+  loggedIn : boolean = true;
 }
