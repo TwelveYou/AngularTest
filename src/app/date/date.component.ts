@@ -7,13 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class DateComponent{
-  myEvent(event : any){
-    console.log(event);
-    console.log('Привет');
-  }
+  text:string = 'Hello World';
+  
+  text2:string = 'Hi World';
 
-  isCollapsed : boolean = true;
-  toggleCollapse(){
-    this.isCollapsed = !this.isCollapsed;
+  showTexts(){
+    console.log('text1 = ' + this.text);
+    console.log('text2 = ' + this.text2);
   }
 }

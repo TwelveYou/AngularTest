@@ -1,11 +1,14 @@
 <div>
-    <button (click)="myEvent($event)">Event в консоль</button>
-    <h3> Более реальный пример </h3>
-    <div>
-        <button *ngIf="isCollapsed" (click)="toggleCollapse()">Отобразить</button>
-        <button *ngIf="!isCollapsed" (click)="toggleCollapse()">Спрятать</button>
-        <div *ngIf="!isCollapsed">
-            <p *ngFor="let item of ['тест1','тест2','тест3']">{{item}}</p>
-        </div>
-    </div>
+    <!-- <input type="text" [value]="text"> -->
+
+    <!-- Однонаправленная привязка -->
+    <input type="text" [ngModel]="text">
+    <p>{{text}}</p>
+
+    <!-- Двусторонняя привязка -->
+    <input type="text" [(ngModel)]="text2">
+    <p>{{text2}}</p> 
+    
+    <input type="button" value="вывод" (click)="showTexts()">
+
 </div>
