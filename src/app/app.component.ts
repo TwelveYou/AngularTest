@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NewServiceService } from './new-service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'My test app';
+  constructor(svc: NewServiceService){
+    svc.consoleText("Hello Service");
+    this.title = svc.word + svc.number.toString();
+    console.log(this.title);
+  }
 }
