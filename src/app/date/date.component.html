@@ -1,9 +1,0 @@
-<button (click)="toggleVisible()">Toggle Visible</button>
-<div [ngClass]="{invisible: visibility}">
-    
-    <h1>ngClass, ngStyle</h1>
-    <p [ngClass]="{class : true}">Test ngClass</p>
-    <p [ngStyle]="{'color':'black'}">Test ngStyle</p>
-    <p [ngClass]="{colorRed: colorRed, colorGreen: !colorRed}">Test Dynamic Style color</p>
-    <button (click)="toggleColor()">Toggle Color</button>
-</div>
