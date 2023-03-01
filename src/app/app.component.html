@@ -1,10 +1,8 @@
 <div>
-    <h1>Angular routes</h1>
-    <nav>
-      <a routerLink=""> Главная </a>
-      <a routerLink="news"> Новости </a>
-      <a routerLink="price"> Цена </a>
-      <a routerLink="about"> О нас </a>
-    </nav>
-    <router-outlet></router-outlet>
+  UserName:<input type="text" [(ngModel)]="userName">
+  <button (click)="search()">search</button>
+  <div *ngIf="response">
+    <img src="{{response.avatar_url}}" alt="User pic">
+    <p>{{response.name}} ({{response.login}})</p>
+  </div>
 </div>

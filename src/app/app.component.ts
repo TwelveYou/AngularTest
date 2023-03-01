@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NewServiceService } from './new-service.service';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,16 @@ import { NewServiceService } from './new-service.service';
 })
 
 export class AppComponent {
-  title = 'My test app';
-  constructor(svc: NewServiceService){
-    svc.consoleText("Hello Service");
-    this.title = svc.word + svc.number.toString();
-    console.log(this.title);
+  userName : string = 'angular';
+  response : any;
+
+  constructor(private http: HttpClient){
+  }
+
+  search(){
+    this.http.get('https://api.github.com/users/' + this.userName).subscribe((response)=>{
+      this.response = response;
+      console.log(this.response);
+    });
   }
 }
